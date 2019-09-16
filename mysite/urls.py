@@ -24,6 +24,6 @@ admin.site.register(Genre, GenreAdmin)
 
 
 urlpatterns = [
-    url(r'^genres/$', show_genres),
     url(r'^admin/', admin.site.urls),
+    url(r'^genres/$', show_genres),
 ]
