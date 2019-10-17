@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from mysite.admin import GenreAdmin
-from mysite.models import Genre
-from mysite.views import show_genres
+from mysite.admin import FileAdmin
+from mysite.models import File
+from mysite.views import show_files, add_file
 
 
-admin.site.register(Genre, GenreAdmin)
+admin.site.register(File, FileAdmin)
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^genres/$', show_genres),
+    url(r'add_file/', add_file),
+    url(r'', show_files)
+    
 ]

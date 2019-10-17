@@ -1,12 +1,8 @@
-<body style="margin-left: 75px; margin-top:30px;";> </body>
 
-<h1 style="color:#E74C3C;">Dessert Options</h1>
-
-<p>Which if your favorite?</p>
 
 {% load mptt_tags %}
 <ul>
-    {% recursetree genres %}
+    {% recursetree files %}
         <li>
             {{ node.name }}
             {% if not node.is_leaf_node %}
@@ -17,4 +13,3 @@
         </li>
     {% endrecursetree %}
 </ul>
-</body>
